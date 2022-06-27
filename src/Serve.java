@@ -1,11 +1,10 @@
-import BothSide.*;
 import User.UserSystem;
 
 import java.io.IOException;
 
-public class Test {
+public class Serve {
     public static void main(String[] args) throws IOException {
-        Serve serve = new Serve(2077);
+        BothSide.Serve serve = new BothSide.Serve(2077);
 //        serve.addDefaultHandler(new MsgHandler<HelloMsg>() {
 //            @Override
 //            public void handle(HelloMsg msg) {

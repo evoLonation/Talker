@@ -3,9 +3,7 @@ package BothSide;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.SocketException;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -69,9 +67,10 @@ public class Serve {
         public void run() {
             while (true){
                 try{
-                    OneSide oneSide;
+                    OneSideImp oneSide;
                     synchronized (serverSocket){
-                        oneSide = new OneSide(serverSocket.accept());
+                        oneSide = new OneSideImp(serverSocket.accept());
+//                        System.out.println("新的客户端连接建立，" + oneSide.getIdentifier().ip + ", " + oneSide.getIdentifier().port);
                         oneSide.setMsgHandler(msgHandlerMap);
                         oneSide.setRequestHandler(requestHandlerMap);
                     }

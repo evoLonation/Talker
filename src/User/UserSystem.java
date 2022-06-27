@@ -1,6 +1,7 @@
 package User;
 
 import BothSide.*;
+import BothSide.exception.NegotiateFailed;
 
 import java.util.HashSet;
 import java.util.Set;
